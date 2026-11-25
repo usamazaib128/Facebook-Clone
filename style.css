@@ -1,0 +1,239 @@
+/* svg[viewBox="0 0 24 24"] {
+
+    height: 72px;
+    width: 72px;
+    
+    fill: #0866FF;
+} */
+body {
+  margin: 0;
+  background-color: none;
+}
+.lr {
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  align-items: stretch;
+  height: 690px;
+}
+.left {
+  position: relative;
+  width: 630px;
+}
+.logo_content {
+  height: 590px;
+  padding: 40px 0px 40px 40px;
+}
+.logo svg {
+  height: 72px;
+  width: 72px;
+
+  fill: rgb(0, 100, 224);
+}
+.content {
+  padding: 110px 0px 0px 0px;
+  font-family: sans-serif;
+  font-size: 53px;
+  font-weight: 600;
+}
+.content span {
+  color: #166fe5;
+}
+
+#imgg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 504px;
+  height: 590px;
+  object-fit: contain;
+}
+.vdivider {
+  width: 2px;
+  background-color: #dadde1;
+  margin: 0px;
+}
+
+
+
+
+
+.right {
+  width: 634px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.login h3 {
+  margin-bottom: 35px;
+  font-size: 18px;
+}
+.input-box {
+  position: relative;
+  margin-bottom: 12px;
+}
+.input-box input {
+  width: 525px;
+  height: 60px;
+  border: 1px solid #ccd0d5;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-left: 14px;
+}
+.input-box input:hover,
+.input-box input:focus {
+  border-color: #363636;
+}
+.input-box label {
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  color: #635d63;
+  font-size: 16px;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+  top: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b6c6d;
+  transform: none;
+}
+.hide-btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+
+  width: 36px;
+  height: 36px;
+  
+  align-items: center;
+  justify-content: center;
+  
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.hide-btn .hide-icon {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  fill: none;
+  stroke: #65676b;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.error {
+  display: none;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #e41e3f;
+}
+.input-error {
+  border-color: #e41e3f !important;
+}
+.input-error + label {
+    color:  #e41e3f;
+}
+
+#loginBtn {
+  width: 525px;
+  height: 44px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  background: rgb(0, 100, 224);
+  margin-top: 10px;
+  color: rgb(242, 244, 246);
+  cursor: pointer;
+}
+#loginBtn:hover {
+  background: rgb(0, 95, 211);
+}
+#forgotBtn {
+  width: 525px;
+  height: 44px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  background: transparent;
+  margin-top: 12px;
+  cursor: pointer;
+}
+#forgotBtn:hover {
+  background: #f3f3f3;
+}
+#createBtn {
+  width: 525px;
+  height: 44px;
+  border: 1px solid rgb(0, 100, 224);
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(0, 100, 224);
+  background: transparent;
+  cursor: pointer;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+#createBtn:hover {
+  background-color: #f3f3f3;
+}
+
+.hdivider {
+  padding: 0px 0px 2px 0px;
+  background-color: #dadde1;
+}
+
+.footer {
+  color: #737373;
+  font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  padding: 25px 95px;
+  padding-bottom: 0;
+  max-width: 1064px;
+  margin: auto;
+}
+.footer a {
+  text-decoration: none;
+  color: #737373;
+  cursor: pointer;
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* Create account Page CSS */
