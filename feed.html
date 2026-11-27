@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook</title>
-    <link rel="stylesheet" href="feedstyle.css" />
+    <link rel="stylesheet" href="feed.css" />
   </head>
   <body>
     <header class="navbar">
@@ -66,7 +66,7 @@
           <img src="icons/profile.png" alt="Profile" />
         </button>
         <button class="round-btn" id="logoutBtn" title="Log out">
-        <img src="icons/logout.png" alt="Log out" />
+          <img src="icons/logout.png" alt="Log out" />
         </button>
       </div>
     </header>
@@ -120,8 +120,12 @@
             <span>Ad Center</span>
           </a>
           <a href="#" class="side-item">
-              <img src="icons/ads-manager.png" alt="Ads Manager" class="side-icon" />
-              <span>Ads Manager</span>
+            <img
+              src="icons/ads-manager.png"
+              alt="Ads Manager"
+              class="side-icon"
+            />
+            <span>Ads Manager</span>
           </a>
         </div>
 
@@ -168,8 +172,6 @@
           <span>Candy Crush</span>
         </a>
 
-        
-
         <div class="side-footer">
           <a href="#">Privacy</a> · <a href="#">Terms</a> ·
           <a href="#">Advertising</a> · <a href="#">Ad choices</a> ·
@@ -182,12 +184,12 @@
 
     <div class="main-content">
       <div class="feed-container">
-
-        
         <div class="create-post-box">
           <img src="icons/user.png" alt="Profile" class="create-post-avatar" />
 
-            <button class="create-post-input" id="openPostBtn">What's on your mind?</button>
+          <button class="create-post-input" id="openPostBtn">
+            What's on your mind?
+          </button>
 
           <button class="post-icon-btn" title="Live video">
             <img src="icons/live-video.png" alt="Live video" />
@@ -200,7 +202,6 @@
           </button>
         </div>
 
-
         <div class="stories-wrapper">
           <button
             class="stories-nav-btn stories-nav-prev"
@@ -209,7 +210,6 @@
           >
             <img src="icons/chevron-left.png" alt="Previous" />
           </button>
-          
 
           <div class="stories-row" id="storiesRow">
 
@@ -297,16 +297,9 @@
           </button>
         </div>
 
+        <!-- Post Container -->
 
-
-
-
-        <!-- Post 1 with caption -->
-          
         <div id="postsContainer"></div>
-
-
-
       </div>
     </div>
 
@@ -316,7 +309,7 @@
       <div class="sidebar-scroll">
 
         <!-- Sponsored -->
-         
+
         <h3 class="side-heading">Sponsored</h3>
 
         <a href="#" class="sponsored-item">
@@ -338,6 +331,7 @@
         <hr class="side-divider" />
 
         <!-- Contacts -->
+
         <div class="right-heading-row">
           <h3 class="side-heading">Contacts</h3>
           <div class="right-icon-btns">
@@ -417,7 +411,6 @@
 
         <div class="right-heading-row">
           <h3 class="side-heading">Group Chats</h3>
-         
         </div>
 
         <a href="#" class="side-item">
@@ -432,86 +425,96 @@
       </div>
     </aside>
 
+    <!-- post modal -->
 
-     <div class="modal-overlay" id="postModal">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3>Create post</h3>
-      <button type="button" class="modal-close" id="closePostModal">×</button>
+    <div class="modal-overlay" id="postModal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3>Create post</h3>
+          <button type="button" class="modal-close" id="closePostModal">
+            ×
+          </button>
+        </div>
+
+        <textarea id="postText" placeholder="What's on your mind?"></textarea>
+
+        <div class="modal-preview" id="imagePreviewWrap" hidden>
+          <img id="imagePreview" alt="Preview" />
+          <button type="button" class="modal-remove" id="removeImage">
+            Remove
+          </button>
+        </div>
+
+        <label class="modal-photo-btn" for="postImage">Add photo</label>
+        <input type="file" id="postImage" accept="image/*" hidden />
+
+        <span class="modal-error" id="postError"></span>
+
+        <button type="button" class="modal-submit" id="submitPost">Post</button>
+      </div>
     </div>
 
-    <textarea id="postText" placeholder="What's on your mind?"></textarea>
-
-    <div class="modal-preview" id="imagePreviewWrap" hidden>
-      <img id="imagePreview" alt="Preview" />
-      <button type="button" class="modal-remove" id="removeImage">Remove</button>
+    <div class="modal-overlay" id="likesModal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3>Likes</h3>
+          <button type="button" class="modal-close" id="closeLikesModal">
+            ×
+          </button>
+        </div>
+        <ul id="likesList"></ul>
+      </div>
     </div>
 
-    <label class="modal-photo-btn" for="postImage">Add photo</label>
-    <input type="file" id="postImage" accept="image/*" hidden />
+    <!-- Template -->
 
-    <span class="modal-error" id="postError"></span>
-
-    <button type="button" class="modal-submit" id="submitPost">Post</button>
-  </div>
-</div>
-
-
-<div class="modal-overlay" id="likesModal">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3>Likes</h3>
-      <button type="button" class="modal-close" id="closeLikesModal">×</button>
-    </div>
-    <ul id="likesList"></ul>
-  </div>
-</div>
-
-<!-- Template -->
- 
     <template id="postTemplate">
-  <div class="post-card">
-    <div class="post-header">
-      <img src="icons/user.png" alt="Profile" class="post-avatar" />
-      <div class="post-header-info">
-        <div class="post-name-row">
-          <span class="post-name"></span>
+      <div class="post-card">
+        <div class="post-header">
+          <img src="icons/user.png" alt="Profile" class="post-avatar" />
+          <div class="post-header-info">
+            <div class="post-name-row">
+              <span class="post-name"></span>
+            </div>
+            <div class="post-meta">
+              <span class="post-time"></span>
+            </div>
+          </div>
+          <div class="post-header-actions">
+            <button class="post-icon-btn">
+              <img src="icons/dots.png" alt="More" />
+            </button>
+            <button class="post-icon-btn">
+              <img src="icons/cross.png" alt="Close" />
+            </button>
+          </div>
         </div>
-        <div class="post-meta">
-          <span class="post-time"></span>
+
+        <div class="post-caption"></div>
+        <img alt="Post image" class="post-image" />
+        <div class="post-text-bg"><p></p></div>
+
+        <hr class="post-divider" />
+
+        <div class="post-actions">
+          <div class="like-group">
+            <button class="post-action-btn like-btn">
+              <img src="icons/like.png" alt="Like" class="like-icon" />
+            </button>
+            <button type="button" class="like-count">0</button>
+          </div>
+          <button class="post-action-btn">
+            <img src="icons/comment.png" alt="Comment" />
+            <span>0</span>
+          </button>
+          <button class="post-action-btn">
+            <img src="icons/share.png" alt="Share" />
+            <span>0</span>
+          </button>
         </div>
       </div>
-      <div class="post-header-actions">
-        <button class="post-icon-btn"><img src="icons/dots.png" alt="More" /></button>
-        <button class="post-icon-btn"><img src="icons/cross.png" alt="Close" /></button>
-      </div>
-    </div>
+    </template>
 
-    <div class="post-caption"></div>
-    <img alt="Post image" class="post-image" />
-    <div class="post-text-bg"><p></p></div>
-
-    <hr class="post-divider" />
-
-    <div class="post-actions">
-      <div class="like-group">
-      <button class="post-action-btn like-btn">
-      <img src="icons/like.png" alt="Like" class="like-icon" />
-       </button>
-       <button type="button" class="like-count">0</button>
-       </div>
-      <button class="post-action-btn">
-        <img src="icons/comment.png" alt="Comment" />
-        <span>0</span>
-      </button>
-      <button class="post-action-btn">
-        <img src="icons/share.png" alt="Share" />
-        <span>0</span>
-      </button>
-    </div>
-  </div>
-</template>
-
-    <script src="feedapp.js"> </script>
+    <script src="feed.js"></script>
   </body>
 </html>

@@ -1,10 +1,4 @@
-/* svg[viewBox="0 0 24 24"] {
 
-    height: 72px;
-    width: 72px;
-    
-    fill: #0866FF;
-} */
 body {
   margin: 0;
   background-color: none;
@@ -53,10 +47,6 @@ body {
   background-color: #dadde1;
   margin: 0px;
 }
-
-
-
-
 
 .right {
   width: 634px;
@@ -118,10 +108,10 @@ body {
 
   width: 36px;
   height: 36px;
-  
+
   align-items: center;
   justify-content: center;
-  
+
   border: none;
   cursor: pointer;
   font-size: 18px;
@@ -139,7 +129,6 @@ body {
   stroke-linejoin: round;
 }
 
-
 .error {
   display: none;
   margin-top: 5px;
@@ -150,7 +139,7 @@ body {
   border-color: #e41e3f !important;
 }
 .input-error + label {
-    color:  #e41e3f;
+  color: #e41e3f;
 }
 
 #loginBtn {
@@ -236,4 +225,3 @@ body {
   margin-bottom: 18px;
 }
 
-/* Create account Page CSS */

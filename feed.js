@@ -26,11 +26,11 @@ window.onload = checkButtons;
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const nameEl = document.getElementById("loggedInUserName");
+    const nameEl = document.getElementById("loggedInUserName");
 
-  if (currentUser && nameEl) {
-    nameEl.textContent = `${currentUser.firstName} ${currentUser.surname}`;
-  }
+    if (currentUser && nameEl) {
+        nameEl.textContent = `${currentUser.firstName} ${currentUser.surname}`;
+    }
 });
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
@@ -39,7 +39,7 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 });
 
 
-// ---------- Posts ----------
+//  Posts 
 
 
 function getPosts() {
@@ -56,8 +56,8 @@ function createPost(post) {
     card.querySelector(".like-count").textContent = post.likes.length;
 
     if (post.likes.includes(currentUser.email)) {
-    card.querySelector(".like-icon").src = "icons/like-blue.png";
-}
+        card.querySelector(".like-icon").src = "icons/like-blue.png";
+    }
 
     const caption = card.querySelector(".post-caption");
     const image = card.querySelector(".post-image");
@@ -99,7 +99,7 @@ function renderPosts() {
 renderPosts();
 setInterval(renderPosts, 60000);
 
-// ---------- Like  Unlike ----------
+//  Like  Unlike
 
 
 document.getElementById("postsContainer").addEventListener("click", function (e) {
@@ -149,7 +149,7 @@ function timeAgo(timestamp) {
     return days === 1 ? "1 day ago" : `${days} days ago`;
 }
 
-// ---------- Create post popup ----------
+// Create post popup
 
 
 const postModal = document.getElementById("postModal");
@@ -186,7 +186,7 @@ function closeModal() {
 openPostBtn.addEventListener("click", openModal);
 closePostModal.addEventListener("click", closeModal);
 
-// popup ke bahar (dhundle hisse par) click karne se band ho
+// close popup by clicking outside the box
 
 postModal.addEventListener("click", function (e) {
     if (e.target === postModal) closeModal();
@@ -259,7 +259,7 @@ submitPost.addEventListener("click", function () {
 });
 
 
-// ---------- Likes list popup ----------
+//  Likes list popup 
 
 
 const likesModal = document.getElementById("likesModal");

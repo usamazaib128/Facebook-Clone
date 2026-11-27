@@ -47,17 +47,6 @@ surname.addEventListener("blur", function () {
 });
 
 
-// gender.addEventListener("change", function () {
-//     if (gender.value === "") {
-//         gender.classList.add("input-error");
-//         genderError.textContent = "Please select your gender.";
-//         genderError.style.display = "block";
-//     }
-//     else {
-//         gender.classList.remove("input-error");
-//         genderError.style.display = "none";
-//     }
-// });
 
 
 regEmail.addEventListener("blur", function () {
@@ -206,37 +195,37 @@ signupForm.addEventListener("submit", function (e) {
 
     const emailValue = regEmail.value.trim().toLowerCase();
 
-if (emailValue === "") {
-    regEmail.classList.add("input-error");
-    regEmailError.textContent =
-        "Please enter your email address or mobile number.";
-    regEmailError.style.display = "block";
-    isValid = false;
-}
-else if (!emailPattern.test(emailValue)) {
-    regEmail.classList.add("input-error");
-    regEmailError.textContent =
-        "Please enter a valid mobile number or email address.";
-    regEmailError.style.display = "block";
-    isValid = false;
-}
-else {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const alreadyExists = users.some(function (u) {
-        return u.email === emailValue;
-    });
-
-    if (alreadyExists) {
+    if (emailValue === "") {
         regEmail.classList.add("input-error");
-        regEmailError.textContent = "This email is already registered.";
+        regEmailError.textContent =
+            "Please enter your email address or mobile number.";
+        regEmailError.style.display = "block";
+        isValid = false;
+    }
+    else if (!emailPattern.test(emailValue)) {
+        regEmail.classList.add("input-error");
+        regEmailError.textContent =
+            "Please enter a valid mobile number or email address.";
         regEmailError.style.display = "block";
         isValid = false;
     }
     else {
-        regEmail.classList.remove("input-error");
-        regEmailError.style.display = "none";
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const alreadyExists = users.some(function (u) {
+            return u.email === emailValue;
+        });
+
+        if (alreadyExists) {
+            regEmail.classList.add("input-error");
+            regEmailError.textContent = "This email is already registered.";
+            regEmailError.style.display = "block";
+            isValid = false;
+        }
+        else {
+            regEmail.classList.remove("input-error");
+            regEmailError.style.display = "none";
+        }
     }
-}
 
 
 
@@ -263,18 +252,18 @@ else {
     }
 
 
-    
-       
+
+
     if (isValid) {
 
         const users = JSON.parse(localStorage.getItem("users")) || [];
 
         const newUser = {
-            firstName : firstName.value.trim(),
-            surname : surname.value.trim(),
-            gender : gender.value.trim(),
-            email : emailValue,
-            password : regPassword.value.trim()
+            firstName: firstName.value.trim(),
+            surname: surname.value.trim(),
+            gender: gender.value.trim(),
+            email: emailValue,
+            password: regPassword.value.trim()
         };
 
         users.push(newUser);
@@ -283,6 +272,7 @@ else {
         alert("Account created successfully!");
 
         // signupForm.submit();
+        
         window.location.href = "index.html"
     }
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
     <!-- <script src="app.js"></script> -->
   </head>
   <body>
@@ -57,14 +57,13 @@
                 <label for="password">Password</label>
 
                 <button type="button" class="hide-btn" id="hidePass">
-
-                    <svg class="hide-icon" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path>
-                        <circle cx="12" cy="12" r="3"></circle>
-                    </svg>
-                    
+                  <svg class="hide-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
                 </button>
-
 
                 <span class="error" id="passError"></span>
               </div>
@@ -74,7 +73,7 @@
             <button type="button" id="forgotBtn">Forgotten password?</button>
             <div class="divider"></div>
             <button
-              onclick="window.location.href = 'regpage.html'"
+              onclick="window.location.href = 'register.html'"
               type="button"
               id="createBtn"
             >
@@ -124,6 +123,6 @@
       </div>
       <p>Meta © 2026</p>
     </footer>
-    <script src="loginapp.js"> </script>
+    <script src="login.js"></script>
   </body>
 </html>

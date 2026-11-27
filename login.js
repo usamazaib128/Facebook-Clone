@@ -87,11 +87,8 @@ loginForm.addEventListener("submit", function (e) {
 
 
     localStorage.setItem("currentUser", JSON.stringify(user));
-    
-    window.location.href = "feedpage.html";
 
-    // window.location.href = "feedpage.html";
-
+    window.location.href = "feed.html";
 
     // alert("Login successful!");
 });

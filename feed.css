@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  background-color:  rgb(242, 244, 247);
+  background-color: rgb(242, 244, 247);
 }
 
 .navbar {
@@ -21,6 +21,7 @@ body {
 }
 
 /* left */
+
 .nav-left {
   display: flex;
   align-items: center;
@@ -47,6 +48,7 @@ body {
 }
 
 /* center */
+
 .nav-center {
   display: flex;
   height: 100%;
@@ -71,17 +73,15 @@ body {
 }
 
 .nav-btn img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .nav-btn:hover {
   background: #f2f2f2;
 }
-/* .nav-btn.active {
-  color: #1877f2;
-} */
+
 .nav-btn.active::after {
   content: "";
   position: absolute;
@@ -94,6 +94,7 @@ body {
 }
 
 /* right */
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -118,26 +119,18 @@ body {
 }
 
 .round-btn img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
-/* .avatar {
-  background: #1877f2;
-  color: #fff;
-} */
-
-
-/*  Left Sidebar  */
 
 
 .left-sidebar {
   position: fixed;
-  top: 56px; 
+  top: 56px;
   left: 0;
   width: 280px;
   height: calc(100vh - 56px);
-  
 }
 
 .sidebar-scroll {
@@ -178,7 +171,6 @@ body {
 
 /* side items */
 
-
 .side-item {
   display: flex;
   align-items: center;
@@ -215,10 +207,6 @@ body {
   border-radius: 50%;
 }
 
-/* .profile-item span {
-  font-weight: 600;
-} */
-
 
 .see-more-checkbox {
   display: none; /*hide the checkbox*/
@@ -228,11 +216,9 @@ body {
   display: none;
 }
 
-
 .see-more-text-less {
   display: none;
 }
-
 
 .see-more-checkbox:checked ~ .extra-items {
   display: block;
@@ -246,11 +232,9 @@ body {
   display: inline;
 }
 
-
 .see-more-icon {
   transition: transform 0.2s ease;
 }
-
 
 .see-more-checkbox:checked ~ .see-more-btn .see-more-icon {
   transform: rotate(180deg);
@@ -267,12 +251,10 @@ body {
   object-fit: cover;
 }
 
-/* .see-more-icon-wrap img {
-  width: 20px;
-  height: 20px;
-} */
+
 
 /* Divider */
+
 .side-divider {
   border: none;
   border-top: 1px solid #ccd0d5;
@@ -280,6 +262,7 @@ body {
 }
 
 /* Shortcuts heading */
+
 .side-heading {
   font-size: 17px;
   color: #65676b;
@@ -288,9 +271,8 @@ body {
 }
 
 .shortcut-icon {
-  border-radius: 8px; 
+  border-radius: 8px;
 }
-
 
 .side-footer {
   padding: 12px 8px;
@@ -307,11 +289,6 @@ body {
 .side-footer a:hover {
   text-decoration: underline;
 }
-
-
-
-
-
 
 /* MAIN CONTENT */
 
@@ -388,9 +365,7 @@ body {
   object-fit: contain;
 }
 
-
 /* STORIES SECTION */
-
 
 .stories-wrapper {
   position: relative;
@@ -487,13 +462,6 @@ body {
 
 /* Friend story card */
 
-/* .friend-story-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom,
-   rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%);
-} */
 
 .story-avatar {
   position: absolute;
@@ -518,8 +486,6 @@ body {
   z-index: 2;
   line-height: 1.2;
 }
-
-
 
 /* Nav arrows */
 
@@ -562,7 +528,6 @@ body {
   display: none;
 }
 
-
 /*  POST CARD  */
 
 .post-card {
@@ -602,7 +567,6 @@ body {
   font-weight: 600;
   color: #050505;
 }
-
 
 .post-meta {
   display: flex;
@@ -651,7 +615,8 @@ body {
   background: #000;
 }
 
-/* Text-only post — plain white background */
+/* Text-only post white bg */
+
 .post-text-bg {
   width: 100%;
   min-height: 220px;
@@ -678,7 +643,12 @@ body {
   margin: 8px 16px 0;
 }
 
-/* Single action row: icon + count, tight gap, left aligned */
+
+
+
+
+
+
 
 .post-actions {
   display: flex;
@@ -704,11 +674,6 @@ body {
   height: 18px;
 }
 
-
-
-
-
-
 /* RIGHT SIDEBAR */
 
 .right-sidebar {
@@ -725,8 +690,6 @@ body {
   padding: 8px 8px 16px;
 }
 
-
-
 .right-sidebar .sidebar-scroll:hover::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -740,7 +703,6 @@ body {
 .right-sidebar .sidebar-scroll:hover {
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
-
 
 .right-heading-row {
   display: flex;
@@ -809,7 +771,6 @@ body {
 .sponsored-info {
   display: flex;
   flex-direction: column;
-  
 }
 
 .sponsored-title {
@@ -818,8 +779,7 @@ body {
   color: #050505;
   white-space: normal; /* nowrap*/
   overflow: visible; /* hidden*/
-  text-overflow: clip;   /*ellipsis*/
-
+  text-overflow: clip; /*ellipsis*/
 }
 
 .sponsored-subtitle {
@@ -827,7 +787,7 @@ body {
   color: #65676b;
 }
 
-/* Contact item (extends side-item, adds online dot) */
+/* Contact item  */
 .contact-item {
   position: relative;
 }
